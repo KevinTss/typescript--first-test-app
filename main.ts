@@ -1,16 +1,23 @@
 
-/*
-Interface:
 
-I define the shape of a `Point` object
-*/
+class Point {
+  x: number;
+  y: number;
 
-interface Point {
-  x: number,
-  y: number
+  // ? >> is the make parameter optionnal
+  constructor(x?: number, y?: number) {
+    this.x = x;
+    this.y = y;
+  }
+
+  draw() {
+    console.log('X: ' + this.x + ',Y: ' + this.y);
+  }
+
+  getDistance(another: Point) {
+    // ...
+  }
 }
 
-// And I use it like a type
-let drawPoint = (point: Point) => {
-  // ...
-}
+let a = new Point(1, 2);
+a.draw();
