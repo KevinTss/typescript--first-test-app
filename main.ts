@@ -1,21 +1,14 @@
 
-let a: string;
+// Type assertion
 
-let b: number;
+let message;
+message = 'abc';
+let isEndsWithC = (<string>message).endsWith('c');
+// the <string> allow us to tell TS that the following variable is a string
+// Then you can have the intellisense with the methods `endsWith` who is aviable only on a string variable
 
-let c: boolean;
+// Other way to do it
 
-let d: any; // Any types
+let isEndsWithC_2 = (message as string).endsWith('c');
 
-let e: number[] = [1, 2, 3]; // Decalre a array of numbers
-
-let f: any[] = ["a", true, 1]; // Decalre an array of any ==> NOT RECOMMENDED
-
-// ENUM
-const ColorRed = 0;
-const ColorGreen = 1;
-const ColorBlue = 2;
-// this can be done using enum type from typescript
-
-enum Color { Red = 0, Green = 1, Blue = 2 };
-let backgroundColor = Color.Red;
+// These both methods won't change the type of the variable. It's just a way to tell TS that this specific cariable is this type

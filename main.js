@@ -1,20 +1,9 @@
-var a;
-var b;
-var c;
-var d; // Any types
-var e = [1, 2, 3]; // Decalre a array of numbers
-var f = ["a", true, 1]; // Decalre an array of any ==> NOT RECOMMENDED
-// ENUM
-var ColorRed = 0;
-var ColorGreen = 1;
-var ColorBlue = 2;
-// this can be done using enum type from typescript
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Green"] = 1] = "Green";
-    Color[Color["Blue"] = 2] = "Blue";
-})(Color || (Color = {}));
-;
-var backgroundColor = Color.Red;
-console.log(backgroundColor)
+// Type assertion
+var message;
+message = 'abc';
+var isEndsWithC = message.endsWith('c');
+// the <string> allow us to tell TS that the following variable is a string
+// Then you can have the intellisense with the methods `endsWith` who is aviable only on a string variable
+// Other way to do it
+var isEndsWithC_2 = message.endsWith('c');
+// These both methods won't change the type of the variable. It's just a way to tell TS that this specific cariable is this type
