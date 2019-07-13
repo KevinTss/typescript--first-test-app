@@ -1,8 +1,4 @@
+let a: String;
 
-function log(message) {
-  console.log(message);
-}
-
-var message = "Hello Word";
-
-log(message);
+a = "Kevin";
+a = 123;
