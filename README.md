@@ -18,3 +18,8 @@ tsc --version
 ```
 tsc ./main.ts
 ```
+  
+## Type of variable
+  
+[Here](https://github.com/KevinTss/typescript--first-test-app/commit/55c074609e43f3e7c2540808727a7df2111e0da6) is an example how the declare variable with types.  
+  
