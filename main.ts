@@ -1,38 +1,16 @@
 
 /*
-Problem:
+Interface:
 
-I you have a function who receive a object as parameter, this object should be formatted as the function needed
-
-Example:
-
-let drawPoint = (point) => {
-  // ...
-}
-
-Here we are attenting for this:
-
-drawPoint({
-  x: 1,
-  y: 2
-})
-
-But we cann pass this:
-
-drawPoint({
-  name: "Kevin"
-})
-
-End the function will not work...
-
-Solution:
+I define the shape of a `Point` object
 */
 
-let drawPoint = (point: { x: number, y: number}) => {
-  // ...
+interface Point {
+  x: number,
+  y: number
 }
 
-// We just specify the format of the object that the function is waiting for
-
-// But... Is verbose...
-// The solution is use interface
+// And I use it like a type
+let drawPoint = (point: Point) => {
+  // ...
+}

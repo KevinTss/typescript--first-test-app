@@ -1,6 +1,9 @@
-// Arrow functions
-var log = function (message) {
-    console.log(message);
+/*
+Interface:
+
+I define the shape of a `Point` object
+*/
+// And I use it like a type
+var drawPoint = function (point) {
+    // ...
 };
-var doLog = function (message) { return console.log(message); };
-// Like JS ES6
