@@ -1,22 +1,20 @@
 
 
 class Point {
-  x: number;
-  y: number;
+  // access modifiers to avoid to modify the value out of the class
+  private x: number;
+  private y: number;
 
-  // ? >> is the make parameter optionnal
   constructor(x?: number, y?: number) {
     this.x = x;
     this.y = y;
   }
 
-  draw() {
+  // by default it's public methods, you can specify it, but not necessary
+  public draw() {
     console.log('X: ' + this.x + ',Y: ' + this.y);
   }
 
-  getDistance(another: Point) {
-    // ...
-  }
 }
 
 let a = new Point(1, 2);
